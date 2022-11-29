@@ -5,15 +5,17 @@
 ### the initial set up you won't need to come back to this file often.
 ###########################################################
 
+remove-ads: true
+
 ############################
 # --- Required options --- #
 ############################
 
 # Name of website
-title: My Website
+title: Enrique Benvenutto
 
 # Your name to show in the footer
-author: Some Person
+author: Enrique Benvenutto
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -32,14 +34,14 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+avatar: "/assets/img/main.webp"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-#title-img: /path/to/image
+#title-img: "/assets/img/logo.png"
 
 
 #####################################
@@ -49,13 +51,13 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
+  #email: "someone@example.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: c/daattali
+  #facebook: deanattali
+  #github: daattali
+  #twitter: daattali
+  #patreon: DeanAttali
+  #youtube: c/daattali
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
@@ -94,7 +96,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+url-pretty: "enrique.wtf"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
@@ -109,33 +111,52 @@ feed_show_tags: true
 post_search: true
 
 # Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
-edit_page_button: true
+edit_page_button: false
 
 # Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
 # If this setting is off, then long sub-menu words might get cut off
 # See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
-navbar-var-length: false
+navbar-var-length: true
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "Enrique, Benvenutto, Navarro, hacking, personal website, security, CVE-2021-4031, CVE-2022-42908, CVE-2022-42909"
 
 ######################################
 # --- Colours / background image --- #
 ######################################
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
+dark-theme: true
 
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
-page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#EAEAEA"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
+navbar-col: "#161b22"
+navbar-text-col: "#e4e6eb"
+navbar-border-col: "#23282f"
+
+footer-col: "#161b22"
+footer-text-col: "#e4e6eb"
+footer-link-col: "#fff"
+footer-hover-col: "#7ee787"
+footer-border-col: "#23282f"
+
+hover-col: "#7ee787"
+page-col: "#0d1117"
+#subheading-col: "#8b949e"
+
+
+text-col: "#e4e6eb"
+link-col: "#7ee787"
+
+
+
+border-col: "#999"
+#post-subtitle-col: "#8b949e"
+#post-title-col: "#7ee787"
+#h2-col: "#7ee787"
+#h3-col:
+#h4-col:
+#h5-col:
+#h6-col:
+
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
