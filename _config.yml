@@ -22,11 +22,12 @@ author: Enrique Benvenutto
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
+  My Work: "mywork"
+  Blog: "blog"
+  Contact: 
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
 
 ################
 # --- Logo --- #
@@ -41,7 +42,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-#title-img: "/assets/img/logo.png"
+title-img: "/assets/img/logo.png"
 
 
 #####################################
@@ -54,13 +55,13 @@ social-network-links:
   #email: "someone@example.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   #facebook: deanattali
-  #github: daattali
+  github: tastypeanut
   #twitter: daattali
   #patreon: DeanAttali
   #youtube: c/daattali
 #  medium: yourname
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: ebenvenutto
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -81,7 +82,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: This is an RSS feed of enrique.wtf
 
 ###########################
 # --- General options --- #
@@ -131,23 +132,16 @@ dark-theme: true
 navbar-col: "#161b22"
 navbar-text-col: "#e4e6eb"
 navbar-border-col: "#23282f"
-
 footer-col: "#161b22"
 footer-text-col: "#e4e6eb"
 footer-link-col: "#fff"
 footer-hover-col: "#7ee787"
 footer-border-col: "#23282f"
-
 hover-col: "#7ee787"
 page-col: "#0d1117"
 #subheading-col: "#8b949e"
-
-
 text-col: "#e4e6eb"
 link-col: "#7ee787"
-
-
-
 border-col: "#999"
 #post-subtitle-col: "#8b949e"
 #post-title-col: "#7ee787"
@@ -242,16 +236,16 @@ border-col: "#999"
 # (2) Install the giscus app in your repository (details at https://giscus.app),
 # (3) Fill in *all* the parameters below 
 # See more details about giscus and each of the following parameters at https://giscus.app
-#giscus:
-#  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
-#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  repository-id: # ID of your repository, retrieve this info from https://giscus.app
-#  category: Announcements # Category name of your GitHub Discussion posts
-#  category-id: # ID of your category, retrieve this info from https://giscus.app
-#  mapping: pathname
-#  reactions-enabled: 1
-#  emit-metadata: 0
-#  theme: light
+giscus:
+  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
+  repository: tastypeanut/beta2 # GitHub username/repository eg. "daattali/beautiful-jekyll"
+  repository-id: R_kgDOIhSJYA # ID of your repository, retrieve this info from https://giscus.app
+  category: Announcements # Category name of your GitHub Discussion posts
+  category-id: DIC_kwDOIhSJYM4CSz2l # ID of your category, retrieve this info from https://giscus.app
+  mapping: pathname
+  reactions-enabled: 1
+  emit-metadata: 0
+  theme: dark
 
 ################
 # --- Misc --- #
@@ -268,11 +262,11 @@ date_format: "%B %-d, %Y"
 #################################################################################
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Europe/Madrid"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
-paginate: 5
+permalink: /blog/:year-:month-:day-:title/
+paginate: 3
 
 kramdown:
   input: GFM
