@@ -148,7 +148,7 @@ enrique@host:~/dnscan$ ./dnscan.py -d twitter.com -w subdomains-10000.txt -t 10 
 </pre>
 
 {: .box-note}
-**Note:** The reason why there are repeated subdomains is that each one ponts to a different IP address.
+**Note:** The reason why there are repeated subdomains is because each one points to a different IP address.
 
 To search for AAAA records (IPv6), we just need to add the `-6` argument as indicated by the help menu. We could do other things, like a recursive subdomain scan, or TLD scanning, but these options are not covered in this post.
 
