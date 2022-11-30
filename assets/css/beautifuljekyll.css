@@ -59,6 +59,10 @@ blockquote {
 blockquote p:first-child {
   margin-top: 0;
 }
+hr.post{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 hr.small {
   max-width: 6.25rem;
   margin: 1rem auto;
