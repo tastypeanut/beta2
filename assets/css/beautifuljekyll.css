@@ -321,8 +321,8 @@ img {
 .navbar-custom .avatar-container {
   position: absolute;
   left: 50%;
-  width: 3.125rem;
-  bottom: -1.5rem;
+  width: 5.125rem;
+  bottom: -2.5rem;
   transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -561,11 +561,12 @@ footer .footer-custom-content {
   .post-preview .post-image-small {
     display: block;
   }
+}
+@media (max-width: 700px) {
   .avatar-container {
     visibility: hidden;
   }
 }
-
 @media (min-width: 500px) {
       .header-section:not(.has-img){
         padding-top: 2rem;
@@ -775,6 +776,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 .header-section.has-img .intro-header.no-img {
   display: none;
 }
+/*
 @media (max-width: 365px) {
   .header-section.has-img .intro-header.no-img {
     display: block;
@@ -795,7 +797,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   .intro-header.big-img {
     height: 12.5rem;
   }
-}
+}*/
 
 #header-gh-btns {
   margin-bottom: 0.9375rem;
@@ -846,7 +848,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 }
 .pagination .page-item .page-link:hover,
 .pagination .page-item .page-link:focus {
-  color: #FFF;
+  color: {{ site.page-col | default: "#FFF" }};
   border: 1px solid {{ site.hover-col | default: "#0085A1" }};
   background-color: {{ site.hover-col | default: "#0085A1" }};
 }
@@ -1152,6 +1154,7 @@ pre {
   }
 }
 
+/* CSS ADDED BY ME */
 
 .feature-card{
   border: 1px solid {{site.navbar-border-col}};
@@ -1166,39 +1169,81 @@ pre {
   text-align: center;
 }
 
-.list-filters {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1.125rem;
-  margin-top: 1.5rem;
+.blog-button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.blog-button{
+  border: 1px solid {{site.text-col}};
+  background-color: {{site.page-col}};
   text-align: center;
+  color: {{ site.text-col | default: "#404040" }};
+  text-decoration: none;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.625rem 0.3125rem;
 }
 
+.blog-button:hover,
+.blog-button:focus{
+  color: {{ site.page-col | default: "#FFF" }};
+  border: 1px solid {{ site.hover-col | default: "#0085A1" }};
+  background-color: {{ site.hover-col | default: "#0085A1" }};
+  text-decoration: none;
+}
+
+.blog-button {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.625rem 0.3125rem;
+  background-color: {{ site.page-col | default: "#FFF"}};
+  border-radius: 0;
+  color: {{ site.text-col | default: "#404040" }};
+}
 @media (min-width: 768px) {
-  .list-filters {
-    margin-top: 2.5rem;
+  .blog-button {
+    padding: 0.9375rem 1.5625rem;
   }
 }
-
-.list-filters .list-filter  {
-  text-decoration: none !important;
-  margin-right: 0.9375rem;
-  border: 1px solid #777;
-  padding: 0.3125rem 0.625rem;
-  cursor: pointer;
-  display: inline-block;
+.blog-button:hover,
+.blog-button:focus {
+  color: {{ site.page-col | default: "#FFF" }};
+  border: 1px solid {{ site.hover-col | default: "#0085A1" }};
+  background-color: {{ site.hover-col | default: "#0085A1" }};
 }
 
-.list-filters .list-filter.filter-selected,
-.list-filters .list-filter:hover {
-  color: #fff;
-  background: #444;
+.alert{
+  background: rgba(192, 57, 43, 0.7);
+  color: {{ site.text-col | default: "#FFF" }};
+  animation: shake 2s; 
 }
 
-@media only screen and (max-width: 550px) {
-  .list-filters .list-filter {
-    font-size: 1rem;
-    margin-right: 0;
-    margin-bottom: -1px;
-    display: block;
-  }
+@keyframes shake {
+  0% { transform: translateY(0) }
+  5% { transform: translateY(5px) }
+  10% { transform: translateY(-5px) }
+  15% { transform: translateY(5px) }
+  20% { transform: translateY(0) }
+  25% { transform: translateY(0) }
+  30% { transform: translateY(5px) }
+  35% { transform: translateY(-5px) }
+  40% { transform: translateY(5px) }
+  45% { transform: translateY(0) }
+  50% { transform: translateY(0) }
+  55% { transform: translateY(5px) }
+  60% { transform: translateY(-5px) }
+  65% { transform: translateY(5px) }
+  70% { transform: translateY(0) }
+  75% { transform: translateY(0) }
+  80% { transform: translateY(5px) }
+  85% { transform: translateY(-5px) }
+  90% { transform: translateY(5px) }
+  95% { transform: translateY(0) }
 }

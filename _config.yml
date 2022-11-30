@@ -22,8 +22,8 @@ author: Enrique Benvenutto
 ###############################################
 
 navbar-links:
-  My Work: "mywork"
   Blog: "blog"
+  My Work: "mywork"
   Contact: 
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
@@ -160,7 +160,7 @@ border-col: "#999"
 #page-img: "/assets/img/bgimage.png"
 
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
-#mobile-theme-col: "#0085A1"
+mobile-theme-col: "#161b22"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 #site-css:
@@ -243,7 +243,7 @@ giscus:
   category: Announcements # Category name of your GitHub Discussion posts
   category-id: DIC_kwDOIhSJYM4CSz2l # ID of your category, retrieve this info from https://giscus.app
   mapping: pathname
-  reactions-enabled: 1
+  reactions-enabled: 0
   emit-metadata: 0
   theme: dark
 
@@ -266,7 +266,8 @@ timezone: "Europe/Madrid"
 markdown: kramdown
 highlighter: rouge
 permalink: /blog/:year-:month-:day-:title/
-paginate: 3
+paginate: 5
+paginate_path: "/blog/page:num"
 
 kramdown:
   input: GFM

@@ -4,6 +4,12 @@ layout: page
 
 {{ content }}
 
+{% assign psize = site.posts | size %}
+{% if psize == 0 %} 
+  <p></p>
+  <h4 class="center">Uh Oh... This looks a bit empty...</h4>
+{% endif %}
+
 {% assign posts = paginator.posts | default: site.posts %}
 
 <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
@@ -73,7 +79,7 @@ layout: page
         {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
         {% assign excerpt_word_count = post.excerpt | number_of_words %}
         {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-          <a href="{{ post.url | absolute_url }}" class="post-read-more">&nbsp;[Read&nbsp;More]</a>
+          <a href="{{ post.url | absolute_url }}" class="post-read-more">[Read&nbsp;More]</a>
         {% endif %}
       </div>
       {% endunless %}

@@ -4,16 +4,15 @@ layout: page
 
 {{ content }}
 
-{% assign posts = paginator.posts | default: site.posts %}
-
-{% if posts %}
+{% assign psize = site.posts | size %}
+{% if psize > 0 %} 
   <h1 class="center">Latest Posts</h1>
   <hr class="small">
 {% endif %}
 
 <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
 <ul class="posts-list list-unstyled" role="list">
-  {% for post in posts %}
+  {% for post in site.posts limit:3 %}
   <li class="post-preview">
     <article>
 
@@ -101,18 +100,8 @@ layout: page
   </li>
   {% endfor %}
 </ul>
-
-{% if paginator.total_pages > 1 %}
-<ul class="pagination main-pager">
-  {% if paginator.previous_page %}
-  <li class="page-item previous">
-    <a class="page-link" href="{{ paginator.previous_page_path | absolute_url }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="page-item next">
-    <a class="page-link" href="{{ paginator.next_page_path | absolute_url }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
+{% if psize > 0 %} 
+  <div class="blog-button-container">
+    <a href="/blog" class="blog-button">GO TO BLOG</a>
+  </div>
 {% endif %}
