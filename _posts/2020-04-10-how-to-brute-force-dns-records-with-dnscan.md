@@ -24,7 +24,7 @@ If this fails, *dnscan* looks up TXT, MX, DMARC and other records for the doma
 
 ## Installation:
 
-*This installation will be done using a Linux-based OS. Prerequisites: Having git, python, and pip installed.*
+This installation will be done using a Linux-based OS. Prerequisites are having installed git, python, and pip.
 
 We need to run the following commands in a terminal:
 
