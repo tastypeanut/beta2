@@ -1,16 +1,20 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: My Work
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Below is some of my published work. If you have any questions or want to get in contact with me, you can do so [here](/contact). As a full-time student, this unfortunatelly is only a hobbie for me.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+<h2 class="center">Disclosed Vulnerabilities</h2>
 
-What else do you need?
+### [CVE-2021-4031 - Syltek Insufficient Verification of Data Authenticity](https://www.incibe-cert.es/en/early-warning/security-advisories/syltek-insufficient-verification-data-authenticity)
 
-### My story
+Payment bypass vulnerability disclosure in Playtomic's Syltek software, present in all versions before 10.22.00, where an attacker can forge a request and bypass the payment system by marking items as payed without any verification.
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+### [CVE-2022-42908 - Stored XSS in WEPA Print Away]()
+
+This vulnerability is pending publication. More information will become available once it has been released to the public.
+
+### [CVE-2022-42909 - Improper Access Control in WEPA Print Away]()
+
+This vulnerability is pending publication. More information will become available once it has been released to the public.

@@ -24,7 +24,7 @@ body {
 }
 p {
   line-height: 1.5;
-  margin: 1.875rem 0;
+  margin: 1.5rem 0;
 }
 h1,h2,h3,h4,h5,h6 {
   font-weight: 800;
@@ -43,11 +43,12 @@ h4 {
   font-size: 1.125rem;
 }
 h1, h2, h3, h4 {
-  margin-top: 1.25rem;
+  margin-top: 2.6rem;
 }
 a {
   color: {{ site.link-col | default: "#008AFF" }};
 }
+
 a:hover,
 a:focus {
   color: {{ site.hover-col | default: "#0085A1" }};
@@ -1158,13 +1159,20 @@ pre {
   border: 1px solid {{site.navbar-border-col}};
   border-radius: 5px;
   background-color: {{site.navbar-col}};
-  padding: 1.5rem;
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card > h1, .feature-card > h2, .feature-card > h3, .feature-card > h4, .feature-card > h5, .feature-card > h6, .feature-card > p{
+  margin: 1.5rem;
 }
 
 .center{
   text-align: center;
+}
+
+.latest-posts{
+  margin-top: 3.5rem;
 }
 
 .blog-button-container{

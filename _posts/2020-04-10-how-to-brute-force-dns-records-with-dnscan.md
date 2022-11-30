@@ -40,9 +40,7 @@ git clone https://github.com/rbsec/dnscan.git
 cd dnscan && pip install -r requirements.txt
 ~~~
 
-<hr class="post">
-
-## Use:
+## Usage:
 
 Depending on what OS you use, you may need to look up how to run a python script. If you use a Linux-based distribution, you can run it by typing `./dnscan.py` into a terminal (you should make sure the file is [executable](https://askubuntu.com/questions/229589/how-to-make-a-file-e-g-a-sh-script-executable-so-it-can-be-run-from-a-termi)).
 
@@ -79,7 +77,7 @@ optional arguments:
 </pre>
 
 
- As an example, we will try to run the following command:
+As an example, we will try to run the following command:
 
 ~~~
 ./dnscan.py -d twitter.com -w subdomains-10000.txt -t 10 -R 1.0.0.1
