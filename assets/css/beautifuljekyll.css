@@ -883,7 +883,7 @@ table tr td :last-child {
 code {
   padding: 0.125rem 0.25rem;
   color: #c7254e;
-  background-color: #f9f2f4;
+  background-color: {{ site.navbar-col | default: "#f9f2f4"}};
   border-radius: 0.25rem;
 }
 
@@ -898,6 +898,11 @@ pre {
   line-height: 1.5em;
   border-radius: 0.25rem;
   padding: 0.59375rem;
+  background-color: {{ site.navbar-col | default: "rgb(247, 248, 251)"}};
+  box-sizing: border-box;
+  color: {{ site.font-col | default: "#e4e6eb"}};
+  font-family: monospace;
+  border: 1px solid {{ site.border-col | default: "rgba(0,0,0,0.1)"}};
 }
 .highlight pre {
   border: none;
@@ -971,10 +976,10 @@ pre {
 .box-success {
   color: #404040;
   padding: 0.9375rem 0.9375rem 0.9375rem 0.625rem;
-  margin: 1.25rem 1.25rem 1.25rem 0.3125rem;
   border: 1px solid #eee;
   border-left-width: 0.3125rem;
   border-radius: 0.3125rem 0.1875rem 0.1875rem 0.3125rem;
+  width: 100%;
 }
 
 .box-note {
