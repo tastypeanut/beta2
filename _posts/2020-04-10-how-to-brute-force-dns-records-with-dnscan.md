@@ -39,8 +39,8 @@ git clone https://github.com/rbsec/dnscan.git
 ~~~
 cd dnscan && pip install -r requirements.txt
 ~~~
-<br>
-<hr>
+
+<hr class="post">
 
 ## Use:
 
