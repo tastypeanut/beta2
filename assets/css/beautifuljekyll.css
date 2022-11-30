@@ -1149,7 +1149,7 @@ pre {
   border: 1px solid {{site.navbar-border-col}};
   border-radius: 5px;
   background-color: {{site.navbar-col}};
-  padding: 2%;
+  padding: 1.5rem;
   text-align: center;
   margin-bottom: 3.5rem;
 }
