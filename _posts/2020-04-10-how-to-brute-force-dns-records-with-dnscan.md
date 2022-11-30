@@ -3,7 +3,7 @@ layout: post
 title: How to brute-force DNS records with dnscan
 subtitle: A brief introduction to subdomain listing techniques
 excerpt: Enumeration is an important part of pentesting. Mapping out your target’s infrastructure is crucial to finding points of entry into their network, and enumerating their DNS records by brute-force guessing common subdomains can often yield juicy results.
-tags: [beginner, introduction, enumeration, pentesting, DNS]
+tags: [tutorial, beginner, introduction, enumeration, pentesting, DNS]
 comments: true
 readtime: true
 ---
