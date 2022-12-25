@@ -2,8 +2,9 @@
 layout: page
 title: My Work
 ---
-
 Below is some of my published work. If you have any questions or want to get in contact with me, you can do so [here](/contact). As a full-time student, this unfortunatelly is only a hobbie for me.
+<br>
+<br>
 
 <h2 class="center">Disclosed Vulnerabilities</h2>
 
