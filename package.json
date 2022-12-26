@@ -7,8 +7,9 @@
     "jekyll-install": "BUNDLE_GEMFILE=site/Gemfile bundle install",
     "jekyll-develop": "BUNDLE_GEMFILE=site/Gemfile JEKYLL_ENV=development bundle exec jekyll serve --source site --port 6060 --trace --unpublished",
     "jekyll-build": "BUNDLE_GEMFILE=site/Gemfile JEKYLL_ENV=production bundle exec jekyll build --source site --trace",
-    "develop": "run-p jekyll-develop",
-    "deploy": "npm install && run-s jekyll-install jekyll-build",
+    "install-dependencies": "npm install && run-s jekyll-install",
+    "develop": "run-s jekyll-develop",
+    "deploy": "npm run install-dependencies && run-s jekyll-build",
     "cloudflare-deploy": "run-s deploy && cp .cloudflare/* _site"
   },
   "repository": {
