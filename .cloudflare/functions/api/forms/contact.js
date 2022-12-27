@@ -1,14 +1,10 @@
-export function onRequest(env, context) {
-    return new Response(process.env.EMAIL)
-  }
-/*
 import mailChannelsPlugin from "@cloudflare/pages-plugin-mailchannels";
 
-export const onRequestPost(context): PagesFunction = mailChannelsPlugin({
+export const onRequestPost: PagesFunction = mailChannelsPlugin({
     personalizations: [{
         to: [{
             name: "ACME Support",
-            email: "ebenvenutto@outlook.com"
+            email: "qng50r+bpv6t8idjza6c@sharklasers.com"
         }],
     }, ],
     from: {
@@ -19,4 +15,3 @@ export const onRequestPost(context): PagesFunction = mailChannelsPlugin({
         return new Response(`Thank you for submitting your enquiry. A member of the team will be in touch shortly.`);
     },
 });
-*/
