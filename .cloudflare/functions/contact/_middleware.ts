@@ -3,10 +3,10 @@ import mailchannelsPlugin from "@cloudflare/pages-plugin-mailchannels";
 export const onRequest = mailchannelsPlugin({
   personalizations: [
     {
-      to: [{ name: "ACME Support", email: "dtb9q2oshr@enrique.wtf" }],
+      to: [{ name: "enrique.wtf - CONTACT FORM", email: "dtb9q2oshr@enrique.wtf" }],
     },
   ],
-  from: { name: "Enquiry", email: "ceswmyk737@disposableemail.us" },
+  from: { name: "enrique.wtf - CONTACT FORM", email: "dtb9q2oshr@enrique.wtf" },
   respondWith: () =>
     new Response(null, {
       status: 302,
