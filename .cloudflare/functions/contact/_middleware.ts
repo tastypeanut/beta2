@@ -1,18 +1,15 @@
-import mailChannelsPlugin from "@cloudflare/pages-plugin-mailchannels";
+import mailchannelsPlugin from "@cloudflare/pages-plugin-mailchannels";
 
-export const onRequest: PagesFunction = mailChannelsPlugin({
+export const onRequest = mailchannelsPlugin({
   personalizations: [
     {
       to: [{ name: "ACME Support", email: "ceswmyk737@disposableemail.us" }],
     },
   ],
-  from: {
-    name: "ACME Support",
-    email: "ceswmyk737@disposableemail.us",
-  },
-  respondWith: () => {
-    return new Response(
-      `Thank you for submitting your enquiry. A member of the team will be in touch shortly.`
-    );
-  },
+  from: { name: "Enquiry", email: "ceswmyk737@disposableemail.us" },
+  respondWith: () =>
+    new Response(null, {
+      status: 302,
+      headers: { Location: "/thank-you" },
+    }),
 });
