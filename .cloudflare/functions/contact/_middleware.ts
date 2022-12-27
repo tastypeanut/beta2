@@ -30,10 +30,10 @@ const errorHandler: PagesFunction = async ({ next }) => {
 const mailMiddleware: PagesFunction<Environment> = (context) => mailchannelsPlugin({
   personalizations: [
     {
-      to: [{ name: "enrique.wtf - CONTACT FORM", email: "dtb9q2oshr@enrique.wtf" }],
+      to: [{ name: "enrique.wtf - CONTACT FORM", email: context.env.EMAIL}],
     },
   ],
-  from: { name: "enrique.wtf - CONTACT FORM", email: "dtb9q2oshr@enrique.wtf" },
+  from: { name: "enrique.wtf - CONTACT FORM", email: "no-reply@enrique.wtf" },
   respondWith: () =>
     new Response(null, {
       status: 302,
