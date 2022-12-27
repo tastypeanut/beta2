@@ -8,8 +8,8 @@
     "jekyll-build": "BUNDLE_GEMFILE=site/Gemfile JEKYLL_ENV=production bundle exec jekyll build --source site --trace",
     "install-dependencies": "npm install && run-s jekyll-install",
     "develop": "run-s jekyll-develop",
-    "deploy": "npm run install-dependencies && run-s jekyll-build",
-    "cloudflare-deploy": "run-s deploy && cp -R .cloudflare/_* _site && cp -R .cloudflare/functions ."
+    "build": "run-s jekyll-build",
+    "cloudflare-deploy": "npm run install-dependencies && run-s build && cp -R .cloudflare/_* _site && cp -R .cloudflare/functions ."
   },
   "repository": {
     "type": "git",
