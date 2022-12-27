@@ -9,7 +9,7 @@
     "install-dependencies": "npm install && run-s jekyll-install",
     "develop": "run-s jekyll-develop",
     "deploy": "npm run install-dependencies && run-s jekyll-build",
-    "cloudflare-deploy": "run-s deploy && cp -R .cloudflare/* _site"
+    "cloudflare-deploy": "run-s deploy && cp -R .cloudflare/_* _site && cp -R .cloudflare/functions ."
   },
   "repository": {
     "type": "git",
