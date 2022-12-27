@@ -1,22 +1,3 @@
-/*
-import mailchannelsPlugin from "@cloudflare/pages-plugin-mailchannels";
-
-export const onRequest = mailchannelsPlugin({
-  personalizations: [
-    {
-      to: [{ name: "enrique.wtf - CONTACT FORM", email: "dtb9q2oshr@enrique.wtf" }],
-    },
-  ],
-  from: { name: "enrique.wtf - CONTACT FORM", email: "dtb9q2oshr@enrique.wtf" },
-  respondWith: () =>
-    new Response(null, {
-      status: 302,
-      headers: { Location: "/thank-you" },
-    }),
-});
-*/
-
-
 import mailchannelsPlugin from "@cloudflare/pages-plugin-mailchannels";
 
 const errorHandler: PagesFunction = async ({ next }) => {
@@ -30,15 +11,13 @@ const errorHandler: PagesFunction = async ({ next }) => {
 const mailMiddleware: PagesFunction<Environment> = (context) => mailchannelsPlugin({
   personalizations: [
     {
-      to: [{ name: "enrique.wtf - CONTACT FORM", email: context.env.EMAIL}],
+      to: [{ name: context.env.CONTACT_FORM_DEST_NAME, email: context.env.CONTACT_FORM_DEST_EMAIL}],
     },
   ],
-  from: { name: "enrique.wtf - CONTACT FORM", email: "no-reply@enrique.wtf" },
-  respondWith: () =>
-    new Response(null, {
-      status: 302,
-      headers: { Location: "/thank-you" },
-    }),
+  from: {name: context.env.CONTACT_FORM_SRC_NAME, email: context.env.CONTACT_FORM_SRC_EMAIL},
+  respondWith: () => {
+    return Response.redirect('/', '302');
+  },
   /*
   personalizations: [
     {
@@ -54,7 +33,7 @@ const mailMiddleware: PagesFunction<Environment> = (context) => mailchannelsPlug
   },
 
   respondWith: () => {
-    return Response.redirect('https://honetito.com/thank-you/, 302');
+    return Response.redirect('https://honetito.com/thank-you/', '302');
   },*/
 })(context);
 
