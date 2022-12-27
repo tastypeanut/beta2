@@ -4,7 +4,7 @@ export const onRequestPost: PagesFunction = mailChannelsPlugin({
     personalizations: [{
         to: [{
             name: "ACME Support",
-            email: "qng50r+bpv6t8idjza6c@sharklasers.com"
+            email: "mipapomup.jebulelis@rungel.net"
         }],
     }, ],
     from: {
