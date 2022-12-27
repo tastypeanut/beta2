@@ -1,3 +1,3 @@
-export function onRequest(context) {  
-    return new Response(ccontext.env.EMAIL)
+export async function onRequest({ request, env }) {
+    return new Response('Variable: ' + env.EMAIL)
 }
