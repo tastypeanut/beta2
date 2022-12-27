@@ -1,5 +1,5 @@
 export function onRequest(env, context) {
-    return new Response(env.production.EMAIL)
+    return new Response(process.env.EMAIL)
   }
 /*
 import mailChannelsPlugin from "@cloudflare/pages-plugin-mailchannels";

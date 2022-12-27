@@ -13,4 +13,4 @@ Gemfile.lock
 beautiful-jekyll-theme-*.gem
 package-lock.json
 node_modules
-./functions
+/functions
