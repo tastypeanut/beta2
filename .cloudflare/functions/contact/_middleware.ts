@@ -9,7 +9,7 @@ const errorHandler: PagesFunction = async ({ next }) => {
 };
 
 const mailMiddleware: PagesFunction<Environment> = (context) => mailchannelsPlugin({
-  personalizations: [
+  "personalizations" : [
     {
       to: [{ name: context.env.CONTACT_FORM_DEST_NAME, email: context.env.CONTACT_FORM_DEST_EMAIL}],
     },
@@ -20,23 +20,6 @@ const mailMiddleware: PagesFunction<Environment> = (context) => mailchannelsPlug
       status: 302,
       headers: { Location: "/thank-you" },
     }),
-  /*
-  personalizations: [
-    {
-      to: [{ name: "Hone", email: "contact@" + context.env.MY_DKIM_DOMAIN }],
-      dkim_domain: context.env.MY_DKIM_DOMAIN,
-      dkim_selector: context.env.MY_DKIM_SELECTOR,
-      dkim_private_key: context.env.MY_DKIM_PRIV_KEY,
-    },
-  ],
-  from: { 
-    name: "Website Contact Form", 
-    email: "no-reply@" + context.env.MY_DKIM_DOMAIN 
-  },
-
-  respondWith: () => {
-    return Response.redirect('https://honetito.com/thank-you/', '302');
-  },*/
 })(context);
 
 
