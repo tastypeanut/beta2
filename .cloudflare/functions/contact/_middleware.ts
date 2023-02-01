@@ -18,10 +18,6 @@ const mailMiddleware: PagesFunction<Environment> = (context) => mailchannelsPlug
       "email": "reply_to@email.com",
       "name": "reply_to name"
   },
-  "content" : [ {
-    "type" : "type",
-    "value" : "value"
-  } ],
   "personalizations" : [ {
     "to" : [ {
       "name" : context.env.CONTACT_FORM_DEST_NAME,
