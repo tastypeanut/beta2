@@ -15,9 +15,11 @@ const mailMiddleware: PagesFunction<Environment> = (context) => mailchannelsPlug
     },
   ],
   from: {name: context.env.CONTACT_FORM_SRC_NAME, email: context.env.CONTACT_FORM_SRC_EMAIL},
-  respondWith: () => {
-    return Response.redirect('/', '302');
-  },
+  respondWith: () =>
+    new Response(null, {
+      status: 302,
+      headers: { Location: "/thank-you" },
+    }),
   /*
   personalizations: [
     {

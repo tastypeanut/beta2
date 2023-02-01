@@ -23,8 +23,8 @@ author: Enrique Benvenutto
 
 navbar-links:
   Blog: "blog"
-  My Work: "mywork"
-  Contact: 
+  My Work: "work"
+  Contact: "contact"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
