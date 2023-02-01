@@ -23,12 +23,7 @@ const mailMiddleware: PagesFunction<Environment> = (context) => mailchannelsPlug
       "name": "replyto name"
     },
     "subject" : "subject"
-  } ],
-  respondWith: () =>
-    new Response(null, {
-      status: 302,
-      headers: { Location: "/thank-you" },
-    })
+  } ]
 })(context);
 
 
