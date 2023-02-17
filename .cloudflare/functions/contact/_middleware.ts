@@ -23,7 +23,12 @@ const mailMiddleware: PagesFunction<Environment> = (context) => mailchannelsPlug
       "name" : context.env.CONTACT_FORM_DEST_NAME,
       "email" : context.env.CONTACT_FORM_DEST_EMAIL
     } ]
-  } ]
+  } ],
+  respondWith: () =>
+    new Response(null, {
+      status: 302,
+      headers: { Location: "/thank-you" },
+  }),
 })(context);
 
 
