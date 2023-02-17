@@ -1,0 +1,42 @@
+---
+layout: null
+---
+
+.form {
+    padding: 1rem 0.5rem;
+}
+
+.form button{
+    padding: 0.7rem;
+    margin: 0.5rem 1.5rem;
+    border: 1px solid {{site.navbar-border-col}};
+    border-radius: 5px;
+}
+
+.field{
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+}
+
+.field label,
+.field input,
+.field textarea  {
+    width: 100%;
+    text-align: left;
+}
+
+
+.field input,
+.field textarea {
+    border: 1px solid {{site.navbar-border-col}};
+    border-radius: 5px;
+}
+
+.field input,
+.field textarea{
+    padding: 0.4rem 0.8rem;
+}
+
+.field textarea{
+    height: 10rem;
+}
