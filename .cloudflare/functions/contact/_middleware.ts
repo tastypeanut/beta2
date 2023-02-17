@@ -9,26 +9,15 @@ const errorHandler: PagesFunction = async ({ next }) => {
 };
 
 const mailMiddleware: PagesFunction<Environment> = (context) => mailchannelsPlugin({
-  "subject" : "subject",
-  "from": {
-      "email": context.env.CONTACT_FORM_SRC_EMAIL,
-      "name": context.env.CONTACT_FORM_SRC_NAME
-  },
-  "reply_to": {
-      "email": "reply_to@email.com",
-      "name": "reply_to name"
-  },
-  "personalizations" : [ {
-    "to" : [ {
-      "name" : context.env.CONTACT_FORM_DEST_NAME,
-      "email" : context.env.CONTACT_FORM_DEST_EMAIL
-    } ]
-  } ],
-  respondWith: () =>
-    new Response(null, {
-      status: 302,
-      headers: { Location: "/thank-you" },
-  }),
+  personalizations: [
+    {
+      to: [{ name: "ACME Support", email: "support@example.com" }],
+    },
+  ],
+  from: {
+    name: "ACME Support",
+    email: "support@example.com",
+  }
 })(context);
 
 
