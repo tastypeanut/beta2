@@ -11,7 +11,7 @@ title: Contact Me
         </div>
         <div class="field">
             <label>Subject</label>
-            <input type="text" name="name" required/>
+            <input type="text" name="subject" required/>
         </div>
         <div class="field">
             <label>Email</label>
