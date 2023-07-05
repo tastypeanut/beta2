@@ -18,9 +18,9 @@ title: Enrique Benvenutto
 author: Enrique Benvenutto
 
 # Site settings
-#url-canonical: "https://enrique.wtf"
-url: "https://enrique.wtf"
-baseurl: ""
+url-canonical: "https://beta.enrique.wtf" # the base hostname & protocol for your site
+url: "https://beta.enrique.wtf" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
 
 ###############################################
 # --- List of links in the navigation bar --- #
