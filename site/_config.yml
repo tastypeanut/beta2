@@ -17,6 +17,11 @@ title: Enrique Benvenutto
 # Your name to show in the footer
 author: Enrique Benvenutto
 
+# Site settings
+#url-canonical: "https://enrique.wtf"
+url: "https://enrique.wtf"
+baseurl: ""
+
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
@@ -25,9 +30,10 @@ navbar-links:
   Blog: "blog"
   My Work: "work"
   Contact: "contact"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+  #Leaving this here so I have examples of submenus
+  #Resources:
+  #  - Beautiful Jekyll: "https://beautifuljekyll.com"
+  #  - Learn markdown: "https://www.markdowntutorial.com/"
 
 ################
 # --- Logo --- #
