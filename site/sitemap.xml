@@ -1,0 +1,15 @@
+---
+sitemap: true
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}
+    {% if page.sitemap != false %}
+      <url>
+        <loc>{{ page.url | absolute_url }}</loc>
+        <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+      </url>
+    {% endif %}
+  {% endfor %}
+</urlset>
