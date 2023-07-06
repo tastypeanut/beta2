@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
   spec.add_runtime_dependency "kramdown-parser-gfm", "~> 1.1"
   spec.add_runtime_dependency "kramdown", "~> 2.3.0"
-  spec.add_runtime_dependency "jekyll_picture_tag", "~> 2.0.4"
+  spec.add_runtime_dependency "jekyll_picture_tag", "~> 1.10.2"
 
   spec.add_development_dependency "bundler", ">= 1.16"
   spec.add_development_dependency "rake", "~> 12.0"

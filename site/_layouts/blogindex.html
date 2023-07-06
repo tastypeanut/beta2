@@ -36,7 +36,7 @@ layout: page
       {% if thumbnail != "" %}
       <div class="post-image post-image-normal">
         <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+          {%picture "{{ thumbnail | relative_url }}" --alt Post thumbnail %}
         </a>
       </div>
       {% endif %}
@@ -60,7 +60,7 @@ layout: page
       {% if thumbnail != "" %}
       <div class="post-image post-image-small">
         <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+          {%picture "{{ thumbnail | relative_url }}" --alt Post thumbnail %}
         </a>
       </div>
       {% endif %}
@@ -69,7 +69,7 @@ layout: page
       {% if thumbnail != "" %}
       <div class="post-image post-image-short">
         <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+          {%picture "{{ thumbnail | relative_url }}" --alt Post thumbnail %}
         </a>
       </div>
       {% endif %}

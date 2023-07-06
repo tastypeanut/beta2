@@ -520,16 +520,19 @@ footer .footer-custom-content {
   margin-left: 0.625rem;
   height: 12rem;
   width: 12rem;
+  position: relative;
 }
-.post-preview .post-image {
-  filter: grayscale(40%);
-}
+
 .post-preview .post-image:hover {
   filter: grayscale(0%);
 }
 .post-preview .post-image img {
-  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 100%;
+  max-height: 100%;
 }
 .post-preview .post-image-short {
   margin-top: -2.1875rem;
@@ -655,7 +658,7 @@ footer .footer-custom-content {
 /* --- Post and page headers --- */
 
 .intro-header {
-  margin: 5rem 0 1.25rem;
+  margin: 6.5rem 0 2.5rem;
   position: relative;
 }
 .intro-header.big-img {
@@ -692,7 +695,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 }
 .intro-header.big-img .page-heading,
 .intro-header.big-img .post-heading {
-  padding: 6.25rem 0;
+  padding: 5.25rem 0;
   color: #FFF;
   text-shadow: 1px 1px 3px #000;
 }
